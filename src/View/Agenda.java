@@ -148,7 +148,11 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(TextValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 280, 40));
 
-        TextFormatedData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
+        TextFormatedData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextFormatedDataActionPerformed(evt);
+            }
+        });
         getContentPane().add(TextFormatedData, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, 280, 40));
 
         TextFormatedHora.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT))));
@@ -222,6 +226,10 @@ public class Agenda extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.controller.atualizaValor();
     }//GEN-LAST:event_jComboBoxServicoItemStateChanged
+
+    private void TextFormatedDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFormatedDataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFormatedDataActionPerformed
 
     /**
      * @param args the command line arguments
